@@ -1,22 +1,22 @@
-torch==1.11.0
-torchaudio==0.11.0
-torchvision==0.12.0
-numpy>=1.16.6, <=1.21.4
+torch==2.0.0
+torchaudio==2.0.1
+torchvision==0.15.1
+numpy==1.22
 tqdm>=4.43.0,<4.50.0
-torchtext==0.12.0
+torchtext==0.15.1
 GitPython==3.1.30
-requests==2.23.0
+requests==2.27.0
 fasttext==0.9.1
 nltk==3.6.6
 editdistance==0.5.3
 transformers>=3.4.0, <=4.10.1
 sklearn==0.0
 omegaconf>=2.0.6, <=2.1
-lmdb==0.98
+lmdb==1.0.0
 termcolor==1.1.0
 iopath==0.1.8
 datasets==1.2.1
-matplotlib==3.3.4
+matplotlib==3.5.0
 pycocotools==2.0.2
 ftfy==5.8
 pytorch-lightning==1.6.0
