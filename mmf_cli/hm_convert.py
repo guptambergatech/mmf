@@ -39,8 +39,10 @@ class HMConverter:
         phase_one = True
         for file in files_needed:
             try:
+                print(os.path.join(folder, file))
                 assert PathManager.exists(
-                    os.path.join(folder, "data", file)
+  
+                    os.path.join(folder, file)
                 ), f"{file} doesn't exist in {folder}"
             except AssertionError:
                 phase_one = False
@@ -62,7 +64,7 @@ class HMConverter:
         exists = False
 
         for file in files_needed:
-            exists = exists or PathManager.exists(os.path.join(folder, "data", file))
+            exists = exists or PathManager.exists(os.path.join(folder, file))
 
         if not exists:
             raise AssertionError("Neither img or img.tar.gz exists in current zip")
@@ -148,14 +150,14 @@ class HMConverter:
 
         for annotation in annotations:
             print(f"Moving {annotation}")
-            src = os.path.join(images_path, "data", annotation)
+            src = os.path.join(images_path, annotation)
             dest = os.path.join(annotations_path, annotation)
             move(src, dest)
 
         images = self.IMAGE_FILES
 
         for image_file in images:
-            src = os.path.join(images_path, "data", image_file)
+            src = os.path.join(images_path, image_file)
             if PathManager.exists(src):
                 print(f"Moving {image_file}")
             else:
