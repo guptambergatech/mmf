@@ -150,14 +150,16 @@ class HMConverter:
 
         for annotation in annotations:
             print(f"Moving {annotation}")
-            src = os.path.join(images_path, annotation)
+            # src = os.path.join(images_path, annotation)
+            src = os.path.join(images_path, "data", annotation)
             dest = os.path.join(annotations_path, annotation)
             move(src, dest)
 
         images = self.IMAGE_FILES
 
         for image_file in images:
-            src = os.path.join(images_path, image_file)
+            # src = os.path.join(images_path, image_file)
+            src = os.path.join(images_path, "data", image_file)
             if PathManager.exists(src):
                 print(f"Moving {image_file}")
             else:
