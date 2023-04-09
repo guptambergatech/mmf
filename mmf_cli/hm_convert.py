@@ -64,8 +64,8 @@ class HMConverter:
         exists = False
 
         for file in files_needed:
-            exists = exists or PathManager.exists(os.path.join(folder, file))
-
+            # exists = exists or PathManager.exists(os.path.join(folder, file))
+            exists = exists or PathManager.exists(os.path.join(folder, "data", file))
         if not exists:
             raise AssertionError("Neither img or img.tar.gz exists in current zip")
 
