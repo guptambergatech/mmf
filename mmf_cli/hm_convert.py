@@ -41,8 +41,8 @@ class HMConverter:
             try:
                 print(os.path.join(folder, file))
                 assert PathManager.exists(
-  
-                    os.path.join(folder, file)
+                    os.path.join(folder, "data", file)
+                    #os.path.join(folder, file)
                 ), f"{file} doesn't exist in {folder}"
             except AssertionError:
                 phase_one = False
